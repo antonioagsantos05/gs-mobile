@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/back">
+
+    <!-- Campo de entrada para o nome -->
+    <EditText
+        android:id="@+id/inputNome"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Nome"
+        android:textColorHint="@color/teal_200"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textColor="@color/teal_700"
+        android:backgroundTint="@color/teal_700"
+        android:importantForAutofill="yes" />
+
+    <!-- Campo de entrada para o usuário -->
+    <EditText
+        android:id="@+id/inputUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Usuário"
+        android:textColorHint="@color/teal_200"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/teal_700"
+        android:backgroundTint="@color/teal_700"
+        android:importantForAutofill="yes" />
+
+    <!-- Campo de entrada para o email -->
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Email"
+        android:textColorHint="@color/teal_200"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/teal_700"
+        android:backgroundTint="@color/teal_700"
+        android:importantForAutofill="yes" />
+
+    <!-- Campo de entrada para a senha -->
+    <EditText
+        android:id="@+id/inputSenha"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Senha"
+        android:textColorHint="@color/teal_200"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/teal_700"
+        android:backgroundTint="@color/teal_700"
+        android:importantForAutofill="yes" />
+
+</LinearLayout>
