@@ -2,14 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+    android:background="@color/teal_200"
     tools:context=".PerfilFragment">
 
     <!-- Título do Perfil -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/teal_200"
+        android:background="@color/teal_700"
         android:padding="16dp"
         android:gravity="center">
 
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Nome:"
-                android:textColor="@color/white"
+                android:textColor="@color/teal_700"
                 android:textSize="22sp"
                 android:textStyle="bold"/>
 
@@ -53,8 +53,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="João Silva"
-                android:textColor="@color/white"
+                android:text="--"
+                android:textColor="@color/teal_700"
                 android:textSize="22sp"/>
         </LinearLayout>
 
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Usuário:"
-                android:textColor="@color/white"
+                android:textColor="@color/teal_700"
                 android:textSize="22sp"
                 android:textStyle="bold"/>
 
@@ -79,8 +79,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="joao.silva"
-                android:textColor="@color/white"
+                android:text="--"
+                android:textColor="@color/teal_700"
                 android:textSize="22sp"/>
         </LinearLayout>
 
@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Email:"
-                android:textColor="@color/white"
+                android:textColor="@color/teal_700"
                 android:textSize="22sp"
                 android:textStyle="bold"/>
 
@@ -105,8 +105,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="joao.silva@example.com"
-                android:textColor="@color/white"
+                android:text="--"
+                android:textColor="@color/teal_700"
                 android:textSize="22sp"/>
         </LinearLayout>
 
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Senha:"
-                android:textColor="@color/white"
+                android:textColor="@color/teal_700"
                 android:textSize="22sp"
                 android:textStyle="bold"/>
 
@@ -131,12 +131,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="********"
-                android:textColor="@color/white"
+                android:text="--"
+                android:textColor="@color/teal_700"
                 android:textSize="22sp"/>
         </LinearLayout>
 
-        <!-- Botões de Editar e Sair -->
+        <!-- Botões -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -145,31 +145,11 @@
             android:layout_marginTop="20dp">
 
             <Button
-                android:id="@+id/btn_edit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Editar"
-                android:textColor="@color/teal_200"
-                android:backgroundTint="@color/white"
-                android:textSize="16sp"
-                android:layout_marginEnd="8dp" />
-
-            <Button
-                android:id="@+id/btn_delete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Deletar Conta"
-                android:textColor="@color/teal_200"
-                android:backgroundTint="@color/white"
-                android:textSize="16sp"
-                android:layout_marginEnd="8dp" />
-
-            <Button
                 android:id="@+id/btn_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sair"
-                android:textColor="@color/teal_200"
+                android:textColor="@color/teal_700"
                 android:backgroundTint="@color/white"
                 android:textSize="16sp" />
         </LinearLayout>

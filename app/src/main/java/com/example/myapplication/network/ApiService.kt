@@ -14,15 +14,25 @@ interface ApiService {
     @POST("auth/login")
     fun login(@Body loginRequest: LoginRequest): Call<LoginResponse> // Retorna o token JWT
 
-    // Obter dados do usuário logado
-    @GET("usuarios/me")
-    fun getUsuarioLogado(): Call<UsuarioResponse>
+    // Obter dados do usuário logado pelo ID
+    @GET("usuarios/{id}")
+    fun getUsuarioLogado(
+        @Header("Authorization") authHeader: String,
+        @Path("id") id: Long
+    ): Call<UsuarioResponse>
 
-    // Atualizar dados do usuário logado
-    @PUT("usuarios/me")
-    fun updateUsuario(@Body usuario: UsuarioRequest): Call<UsuarioResponse>
+    // Atualizar dados do usuário
+    @PUT("usuarios/{id}")
+    fun updateUsuario(
+        @Header("Authorization") authHeader: String,
+        @Path("id") id: Long,
+        @Body usuarioRequest: UsuarioRequest
+    ): Call<UsuarioResponse>
 
-    // Deletar usuário logado
-    @DELETE("usuarios/me")
-    fun deleteUsuario(): Call<Void>
+    // Deletar usuário
+    @DELETE("usuarios/{id}")
+    fun deleteUsuario(
+        @Header("Authorization") authHeader: String,
+        @Path("id") id: Long
+    ): Call<Void>
 }

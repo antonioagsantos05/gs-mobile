@@ -1,9 +1,9 @@
 package com.example.myapplication.model
 
 data class UsuarioResponse(
-    val id: Long,           // ID do usuário
-    val nmUsuario: String,  // Nome do usuário
-    val login: String,      // Login do usuário
-    val nmEmail: String,    // Email do usuário
-    val role: String        // Papel do usuário (ADMIN ou USER)
+    val idUsuario: Long,     // ID do usuário
+    val nmUsuario: String,   // Nome completo do usuário
+    val nmLogin: String,     // Nome de login do usuário
+    val nmSenha: String,     // Senha do usuário (criptografada)
+    val nmEmail: String      // Email do usuário
 )
