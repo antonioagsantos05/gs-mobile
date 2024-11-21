@@ -51,6 +51,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.auth0:java-jwt:4.2.1")
     implementation ("com.auth0.android:jwtdecode:2.0.1")
+    implementation ("androidx.cardview:cardview:1.0.0")
+
 
 
     // Testes

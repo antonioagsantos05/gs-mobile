@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/white" /> <!-- Cor de fundo -->
+    <corners android:radius="16dp" /> <!-- Borda arredondada -->
+    <shadow android:elevation="4dp"/> <!-- Elevação simulada -->
+</shape>

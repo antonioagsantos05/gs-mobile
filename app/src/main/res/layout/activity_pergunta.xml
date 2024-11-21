@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EAEAEA">
+
+    <!-- Container das Perguntas -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/perguntasLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Botão de Enviar -->
+    <Button
+        android:id="@+id/btnEnviarRespostas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENVIAR RESPOSTAS"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#FF03DAC5"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

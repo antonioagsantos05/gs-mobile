@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInstance {
-    private const val BASE_URL = "https://java-gs2-api-b0crgfdaf5dcftcy.brazilsouth-01.azurewebsites.net"
+    private const val BASE_URL = "https://api-java-devops.azurewebsites.net"
 
     // Client HTTP configurado com autenticação JWT
     private fun createClient(context: Context): OkHttpClient {
