@@ -25,22 +25,19 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Inicializa o RetrofitInstance
+
         RetrofitInstance.initialize(applicationContext)
 
-        // Referências das Views
         val cadastroLink: TextView = findViewById(R.id.tv_cadastro)
         val loginButton: Button = findViewById(R.id.btn_login)
         val usuarioEditText: EditText = findViewById(R.id.inputUsuario)
         val senhaEditText: EditText = findViewById(R.id.inputSenha)
 
-        // Redirecionar para a tela de cadastro
         cadastroLink.setOnClickListener {
             val intent = Intent(this, CadastroActivity::class.java)
             startActivity(intent)
         }
 
-        // Ação do botão de login
         loginButton.setOnClickListener {
             val usuario = usuarioEditText.text.toString().trim()
             val senha = senhaEditText.text.toString().trim()

@@ -14,15 +14,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Inicializa o fragmento inicial como Home
         replaceFragment(Home())
 
-        // Configura o listener para o BottomNavigationView
         binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home -> replaceFragment(Home())
                 R.id.historico -> replaceFragment(Historico())
-                R.id.perfil -> replaceFragment(PerfilFragment()) // Corrigido para PerfilFragment()
+                R.id.perfil -> replaceFragment(PerfilFragment())
                 else -> {}
             }
             true

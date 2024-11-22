@@ -14,13 +14,11 @@ class Home : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        // Referenciar o botão circular
         val btnIniciarQuiz: Button = view.findViewById(R.id.btn_tirar_foto)
 
-        // Configurar o clique do botão para redirecionar à PerguntaActivity
         btnIniciarQuiz.setOnClickListener {
             redirecionarParaPerguntaActivity()
         }

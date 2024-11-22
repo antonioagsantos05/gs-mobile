@@ -6,7 +6,6 @@
     android:layout_marginBottom="12dp"
     android:background="@drawable/item_background">
 
-    <!-- Título da Pergunta -->
     <TextView
         android:id="@+id/tvPergunta"
         android:layout_width="match_parent"
@@ -16,7 +15,6 @@
         android:textStyle="bold"
         android:paddingBottom="8dp" />
 
-    <!-- Alternativas -->
     <RadioGroup
         android:id="@+id/rgAlternativas"
         android:layout_width="match_parent"

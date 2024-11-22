@@ -21,15 +21,12 @@ class PerguntaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pergunta)
 
-        // Inicializa os elementos da interface
         perguntasLayout = findViewById(R.id.perguntasLayout)
         btnEnviar = findViewById(R.id.btnEnviarRespostas)
 
-        // Carrega as perguntas sorteadas e as exibe
         val perguntasSorteadas = perguntas.shuffled().take(5)
         exibirPerguntas(perguntasSorteadas)
 
-        // Configura o botão "Enviar Respostas"
         btnEnviar.setOnClickListener {
             verificarRespostas(perguntasSorteadas)
         }
@@ -39,23 +36,19 @@ class PerguntaActivity : AppCompatActivity() {
         perguntasSorteadas.forEach { pergunta ->
             val perguntaView = LayoutInflater.from(this).inflate(R.layout.item_pergunta, perguntasLayout, false)
 
-            // Referências dos elementos da pergunta
             val tvPergunta = perguntaView.findViewById<TextView>(R.id.tvPergunta)
             val rgAlternativas = perguntaView.findViewById<RadioGroup>(R.id.rgAlternativas)
 
-            // Configura os textos da pergunta
             tvPergunta.text = pergunta.descricao
 
-            // Adiciona as alternativas ao RadioGroup
             pergunta.alternativas.shuffled().forEach { alternativa ->
                 val radioButton = RadioButton(this).apply {
                     text = alternativa.descricao
-                    tag = alternativa.descricao // Guarda o valor da alternativa como "tag"
+                    tag = alternativa.descricao
                 }
                 rgAlternativas.addView(radioButton)
             }
 
-            // Listener para salvar a resposta selecionada
             rgAlternativas.setOnCheckedChangeListener { _, checkedId ->
                 val selectedRadioButton = perguntaView.findViewById<RadioButton>(checkedId)
                 val respostaSelecionada = selectedRadioButton?.tag as? String
@@ -92,10 +85,8 @@ class PerguntaActivity : AppCompatActivity() {
         val editor = historicoPreferences.edit()
         val historico = historicoPreferences.getStringSet("tentativas", mutableSetOf()) ?: mutableSetOf()
 
-        // Obtém o nome do usuário salvo em SharedPreferences
         val nomeUsuario = sharedPreferences.getString("username", "Usuário Desconhecido")
 
-        // Adiciona o registro ao histórico
         historico.add("$nomeUsuario - $acertos acertos")
 
         editor.putStringSet("tentativas", historico)

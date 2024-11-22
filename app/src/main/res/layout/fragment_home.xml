@@ -6,7 +6,6 @@
     android:background="@color/teal_200"
     tools:context=".Home">
 
-    <!-- Título do Histórico -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -24,7 +23,6 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
-    <!-- Botão Circular -->
     <Button
         android:id="@+id/btn_tirar_foto"
         android:layout_width="250dp"

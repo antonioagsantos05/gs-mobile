@@ -4,9 +4,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/white"> <!-- Alterado para fundo branco -->
+    android:background="@color/white">
 
-    <!-- Campo de entrada para o nome -->
     <EditText
         android:id="@+id/inputNome"
         android:layout_width="match_parent"
@@ -19,7 +18,6 @@
         android:padding="10dp"
         android:layout_marginBottom="10dp" />
 
-    <!-- Campo de entrada para o usuário -->
     <EditText
         android:id="@+id/inputUsuario"
         android:layout_width="match_parent"
@@ -32,7 +30,6 @@
         android:padding="10dp"
         android:layout_marginBottom="10dp" />
 
-    <!-- Campo de entrada para o email -->
     <EditText
         android:id="@+id/inputEmail"
         android:layout_width="match_parent"
@@ -45,7 +42,6 @@
         android:padding="10dp"
         android:layout_marginBottom="10dp" />
 
-    <!-- Campo de entrada para a senha -->
     <EditText
         android:id="@+id/inputSenha"
         android:layout_width="match_parent"

@@ -25,13 +25,13 @@ class Historico : Fragment() {
         val historico = sharedPreferences.getStringSet("tentativas", mutableSetOf()) ?: mutableSetOf()
 
         val historicoLayout = view.findViewById<LinearLayout>(R.id.historicoLayout)
-        historicoLayout.removeAllViews() // Limpa os itens existentes
+        historicoLayout.removeAllViews()
 
         for (item in historico) {
             val itemView = LayoutInflater.from(context).inflate(R.layout.item_historico, historicoLayout, false)
             val tvHistorico = itemView.findViewById<TextView>(R.id.tvHistorico)
             tvHistorico.text = item
-            historicoLayout.addView(itemView) // Adiciona o item no layout pai
+            historicoLayout.addView(itemView)
         }
     }
 }

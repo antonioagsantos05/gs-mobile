@@ -51,7 +51,7 @@ class CadastroActivity : AppCompatActivity() {
     }
 
     private fun fazerCadastro(nome: String, email: String, usuario: String, senha: String) {
-        // Cria o objeto com os campos exigidos pela API
+
         val cadastroRequest = CadastroRequest(
             nmUsuario = nome,
             login = usuario,
@@ -62,7 +62,7 @@ class CadastroActivity : AppCompatActivity() {
 
         Log.d(TAG, "Enviando JSON para cadastro: $cadastroRequest")
 
-        // Faz a requisição para o endpoint /auth/register
+
         RetrofitInstance.api.registrar(cadastroRequest).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 Log.d(TAG, "Requisição enviada - Código de resposta: ${response.code()}")

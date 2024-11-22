@@ -5,7 +5,6 @@
     android:background="@color/teal_200"
     tools:context=".PerfilFragment">
 
-    <!-- Título do Perfil -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -23,7 +22,6 @@
             android:textStyle="bold"/>
     </RelativeLayout>
 
-    <!-- Card de Dados do Usuário -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +30,6 @@
         android:padding="16dp"
         android:layout_gravity="center">
 
-        <!-- Nome -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +55,6 @@
                 android:textSize="22sp"/>
         </LinearLayout>
 
-        <!-- Usuário -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,7 +80,6 @@
                 android:textSize="22sp"/>
         </LinearLayout>
 
-        <!-- Email -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -110,7 +105,6 @@
                 android:textSize="22sp"/>
         </LinearLayout>
 
-        <!-- Senha -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -136,8 +130,6 @@
                 android:textSize="22sp"/>
         </LinearLayout>
 
-        <!-- Botões -->
-        <!-- Botões -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

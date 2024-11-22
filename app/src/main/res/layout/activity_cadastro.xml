@@ -8,7 +8,6 @@
     android:background="@color/teal_700"
     tools:context=".CadastroActivity">
 
-    <!-- Logo Image -->
     <ImageView
         android:id="@+id/img_logo"
         android:layout_width="310dp"
@@ -20,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Nome Input -->
+
     <EditText
         android:id="@+id/inputNome"
         android:layout_width="0dp"
@@ -36,7 +35,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Email Input -->
     <EditText
         android:id="@+id/inputEmail"
         android:layout_width="0dp"
@@ -52,7 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Usuario Input -->
     <EditText
         android:id="@+id/inputUsuario"
         android:layout_width="0dp"
@@ -68,7 +65,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Senha Input -->
     <EditText
         android:id="@+id/inputSenha"
         android:layout_width="0dp"
@@ -84,7 +80,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Cadastrar Button -->
     <Button
         android:id="@+id/btn_cadastrar"
         android:layout_width="179dp"
@@ -98,7 +93,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Login Link -->
     <TextView
         android:id="@+id/tv_login"
         android:layout_width="wrap_content"

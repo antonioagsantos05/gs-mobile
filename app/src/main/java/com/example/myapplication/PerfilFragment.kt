@@ -38,7 +38,6 @@ class PerfilFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_perfil, container, false)
 
-        // Inicializa os componentes de interface
         tvNome = view.findViewById(R.id.tvNome)
         tvUsuario = view.findViewById(R.id.tvUsuario)
         tvEmail = view.findViewById(R.id.tvEmail)
@@ -49,7 +48,6 @@ class PerfilFragment : Fragment() {
 
         buscarDadosUsuario()
 
-        // Configura os botões
         btnLogout.setOnClickListener {
             realizarLogout()
         }
@@ -117,7 +115,7 @@ class PerfilFragment : Fragment() {
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
 
-        activity?.finish() // Fecha a atividade atual
+        activity?.finish()
     }
 
     private fun atualizarDadosUsuario(nome: String?, usuario: String?, email: String?, senha: String?) {
@@ -131,15 +129,13 @@ class PerfilFragment : Fragment() {
             return
         }
 
-        // Cria o objeto de requisição para a API com os campos alterados
         val usuarioRequest = UsuarioRequest(
             nmUsuario = nome ?: tvNome.text.toString(),
             nmLogin = usuario ?: tvUsuario.text.toString(),
             nmEmail = email ?: tvEmail.text.toString(),
-            nmSenha = senha ?: "********" // Senha mascarada se não for alterada
+            nmSenha = senha ?: "********"
         )
 
-        // Faz a chamada da API
         RetrofitInstance.api.updateUsuario("Bearer $token", userId, usuarioRequest)
             .enqueue(object : Callback<UsuarioResponse> {
                 override fun onResponse(call: Call<UsuarioResponse>, response: Response<UsuarioResponse>) {
@@ -171,7 +167,6 @@ class PerfilFragment : Fragment() {
         val inflater = LayoutInflater.from(requireContext())
         val popupView = inflater.inflate(R.layout.popup_editar_perfil, null)
 
-        // Referências aos campos do popup
         val inputNome = popupView.findViewById<EditText>(R.id.inputNome)
         val inputUsuario = popupView.findViewById<EditText>(R.id.inputUsuario)
         val inputEmail = popupView.findViewById<EditText>(R.id.inputEmail)
@@ -185,7 +180,7 @@ class PerfilFragment : Fragment() {
         builder.setView(popupView)
             .setTitle("Editar Perfil")
             .setPositiveButton("Salvar") { _, _ ->
-                // Recupera os dados preenchidos pelo usuário
+
                 val novoNome = if (inputNome.text.toString().isBlank()) null else inputNome.text.toString()
                 val novoUsuario = if (inputUsuario.text.toString().isBlank()) null else inputUsuario.text.toString()
                 val novoEmail = if (inputEmail.text.toString().isBlank()) null else inputEmail.text.toString()
@@ -196,7 +191,6 @@ class PerfilFragment : Fragment() {
                     return@setPositiveButton
                 }
 
-                // Atualiza os dados no banco de dados via API
                 atualizarDadosUsuario(novoNome, novoUsuario, novoEmail, novaSenha)
             }
             .setNegativeButton("Cancelar") { dialog, _ ->
