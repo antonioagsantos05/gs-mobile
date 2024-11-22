@@ -1,17 +1,6 @@
 <div align="center" id="top">  
-    <img src="https://raw.githubusercontent.com/CharCarvalho/GlobalSolution/main/images/LOGO--ENERGYQUEST.png" alt="EnergyQuest" width="200" />  
     <h1 align="center">Energy Quest</h1>  
 </div>  
-
-<p align="center">  
-    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/CharCarvalho/GlobalSolution4?color=56BEB8">  
-    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/CharCarvalho/GlobalSolution4?color=56BEB8">  
-    <img alt="Repository size" src="https://img.shields.io/github/repo-size/CharCarvalho/GlobalSolution4?color=56BEB8">  
-</p>  
-
-<p align="center">  
-    <a href="https://github.com/CharCarvalho" target="_blank">Autor</a>  
-</p>
 
 # 📝 Sobre  
 **Energy Quest** é um aplicativo desenvolvido para aumentar a conscientização sobre o uso de energia sustentável e os desafios da transição energética. Por meio da gamificação, os usuários podem aprender de forma interativa e lúdica sobre práticas energéticas, fontes renováveis e como suas escolhas impactam o meio ambiente.
